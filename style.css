@@ -21,33 +21,26 @@ img {
   width: 250px;
   aspect-ratio: 9 / 16;
   position: relative;
-  /* background-image: url(bg.png); */
   transform-style: preserve-3d;
   transition: rotate var(--timing) ease;
-
-  
 }
 
 .globo:hover {
   rotate: x 25deg;
-  
 }
 
 .globo::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background-color: peru; */
   z-index: 100;
   background-image: radial-gradient(circle, transparent 100px, #101112c8);
   opacity: 0;
   transition: opacity var(--timing);
-  
 }
 
 .globo:hover::before {
   opacity: 1;
-  
 }
 
 .globo::after {
@@ -60,13 +53,11 @@ img {
   filter: blur(2rem);
   z-index: 1;
   transition: rotate var(--timing), translate var(--timing);
-  
 }
 
 .globo:hover::after {
   rotate: x -30deg;
   translate: 0 60px;
-
 }
 
 .globo-bg {
@@ -91,13 +82,14 @@ img {
   transition: var(--timing);
 }
 
-.globo:hover .logo, .globo:hover .image-front {
+.globo:hover .logo,
+.globo:hover .image-front {
   transform: translateY(-2rem) translateZ(30px);
   rotate: x -30deg;
 }
 
 .image-front {
-    scale: 1.25;
+  scale: 1.5rem;
   opacity: 0;
   width: 65%;
   margin-inline: auto;
@@ -105,13 +97,9 @@ img {
   inset: auto 0;
   transition: var(--timing);
   z-index: 100;
-  
-  
 }
 
-.globo:hover .image-front{
-    opacity: 1;
-    width: 65%;
-  margin-inline: auto;
-  inset: auto 0;
+.globo:hover .image-front {
+  opacity: 1;
+  width: 70%;
 }
